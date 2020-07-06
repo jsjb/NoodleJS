@@ -13,7 +13,8 @@
   "description": "A NodeJS mumble client",
   "main": "src/Client.js",
   "scripts": {
-    "test": "istanbul cover _mocha -- --exit",
+    "test": "mocha",
+    "coverage": "nyc npm run test",
     "lint": "eslint src || true"
   },
   "keywords": [
@@ -23,16 +24,16 @@
   "author": "Michiel",
   "license": "MIT",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "bluebird": "^3.5.1",
     "fluent-ffmpeg": "^2.1.2",
-    "@discordjs/opus": "^0.3.2",
     "protobufjs": "^6.8.6"
   },
   "devDependencies": {
     "chai": "^4.1.2",
     "gulp": "^3.9.1",
-    "istanbul": "^0.4.5",
+    "nyc": "^15.1.0",
     "jsdoc-to-markdown": "^4.0.1",
-    "mocha": "^5.1.1"
+    "mocha": "^8.0.1"
   }
 }
