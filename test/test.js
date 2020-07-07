@@ -21,6 +21,10 @@ before((done) => {
     })
 })
 
+after(() => {
+    return client.destroy()
+})
+
 describe('Connection', () => {
     it('should error when it can\'t connect', (done) => {
         const shouldError = new Client({url: 'somenonexistingurl'})
