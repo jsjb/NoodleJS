@@ -195,7 +195,7 @@ describe('Audio', () => {
         return client.voiceConnection.once('end', () => {
             done()
         })
-    })
+    }).timeout(5000)
 
     it('should play a stream', done => {
         client.voiceConnection.playStream(fs.createReadStream('test/test.mp3'))
