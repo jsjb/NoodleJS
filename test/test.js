@@ -21,9 +21,12 @@ before((done) => {
     })
 })
 
+// TODO: DispatchStream shouldn't emit 'finish' while data is being written.
+/* ^ this bug breaks cleanup
 after(() => {
     return client.destroy()
 })
+*/
 
 describe('Connection', () => {
     it('should error when it can\'t connect', (done) => {

@@ -13,7 +13,7 @@
   "description": "A NodeJS mumble client",
   "main": "src/Client.js",
   "scripts": {
-    "test": "mocha",
+    "test": "mocha --exit",
     "coverage": "nyc npm run test",
     "lint": "eslint src || true"
   },
